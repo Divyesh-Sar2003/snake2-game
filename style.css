@@ -11,8 +11,7 @@
     justify-content: center;    
     min-height: 100vh;
     background: #119edab1;
-}
-
+}   
 .wrapper{
     width: 65vmin;
     border-radius: 5px;
@@ -43,4 +42,38 @@
 
 .play-board .head{
     background: #00d0ff;
+}
+.controls{
+    display: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    justify-content: space-between;
+}
+.controls i{
+    padding: 25px 0px;
+    color: aqua;
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid black;
+    width: calc(100%/4);
+}
+.controls i:hover{
+    color: rgba(5, 43, 43, 0.507);
+}
+@media screen and (max-width: 678px )
+{
+    .wrapper
+    {
+        width: 90vmin;
+        height: 115vmin;
+    }    
+    .game-details
+    {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .controls
+    {
+        display: flex;
+    }
 }
