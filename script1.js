@@ -1,6 +1,7 @@
 const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
+const controls = document.querySelectorAll(".controls i");
 
 let gameOver = false;
 let foodX, foodY;
@@ -11,7 +12,7 @@ let setIntervalID ;
 let score = 0;
 //getting high score from local storage
 let highScore = localStorage.getItem("high-score") || 0;
-highScoreElement.innerText = `High-Score : ${highScore}`;
+highScoreElement.innerText = `High Score : ${highScore}`;
 
 const changeFoodPosition = () => {
     //passing a random 0-30 value as food position 
@@ -57,6 +58,11 @@ const changeDirection  = (e) =>
     }
    
 }
+
+controls.forEach(key =>
+    {   //calling and change direction by data-set 
+        key.addEventListener("click", () => changeDirection({key:key.dataset.key}));
+    });
 
 const initGame = () => {
     if(gameOver) return handleGameOver();
@@ -106,5 +112,5 @@ snakeBody[0] = [snakeX, snakeY];
 
 changeHeadPosition();
 changeFoodPosition();
-setIntervalID =  setInterval(initGame, 125);
+setIntervalID =  setInterval(initGame, 165);
 document.addEventListener("keydown", changeDirection);
