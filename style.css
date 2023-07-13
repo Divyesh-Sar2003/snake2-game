@@ -6,11 +6,11 @@
     font-family: 'Open Sans',sans-serif;
 }
  body{
-    display:grid;
+    display:flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #119edab1;
+   background-color: #00d0ff;
 }  
  /*wrapper css   */
 .wrapper{
