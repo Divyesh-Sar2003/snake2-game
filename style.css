@@ -6,12 +6,13 @@
     font-family: 'Open Sans',sans-serif;
 }
  body{
-    display: flex;
+    display:grid;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
     min-height: 100vh;
-    background: #119edab1;
-}   
+    background-color: #119edab1;
+}  
+ /*wrapper css   */
 .wrapper{
     width: 65vmin;
     border-radius: 5px;
@@ -43,24 +44,44 @@
 .play-board .head{
     background: #00d0ff;
 }
-.controls{
-    display: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    justify-content: space-between;
-}
-.controls i{
-    padding: 25px 0px;
-    color: aqua;
+
+.keys 
+{
+    font-family: 'Lato', sans-serif;    
     text-align: center;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    display: none;
+   
+  }
+  
+  .arr {
     cursor: pointer;
-    border-right: 1px solid black;
-    width: calc(100%/4);
-}
-.controls i:hover{
-    color: rgba(5, 43, 43, 0.507);
-}
-@media screen and (max-width: 678px )
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background: rgb(3, 175, 255);
+    color: white;
+    font-size: 50px;
+    border-right: 10px solid darken(grey, 20);
+    border-bottom: 10px solid darken(grey, 20);
+    border-left: 10px solid darken(grey, 15);
+    border-top: 10px solid darken(grey, 10);  
+    display: inline-block;
+    margin: 5px;
+    transition: all .05s linear;
+    &:active {
+      border-bottom: 8px solid darken(grey, 20);
+      text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;    
+      transform: translate(0, 2px);
+    }
+    user-select: none;
+  }
+  
+
+@media screen and (max-width: 768px )
 {
     .wrapper
     {
@@ -72,8 +93,8 @@
         font-size: 1rem;
         padding: 15px 27px;
     }
-    .controls
+    .keys
     {
-        display: flex;
+        display:block;
     }
 }
