@@ -65,6 +65,7 @@
     background: rgb(3, 175, 255);
     color: white;
     font-size: 50px;
+    border-radius: 15px;
     border-right: 10px solid darken(grey, 20);
     border-bottom: 10px solid darken(grey, 20);
     border-left: 10px solid darken(grey, 15);
@@ -88,6 +89,7 @@
         width: 90vmin;
         height: 115vmin;
         margin-left:55px;
+        margin-top: 20px;
     }    
     .game-details
     {
@@ -96,6 +98,75 @@
     }
     .keys
     {
+        margin-left: 60px;
+        display:block;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .wrapper
+    {
+        width: 90vmin;
+        height: 115vmin;
+       margin-left: calc(100%/5.2);
+       margin-top: 20px;
+    }    
+    .game-details
+    {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .keys
+    {
+        margin-left: 40px;
+        display:block;
+    }
+}
+
+@media screen and (max-width: 375px)
+{
+    .wrapper
+    {
+        width: 90vmin;
+        height: 115vmin;
+       margin-left: calc(100%/3.4);
+       margin-top: 20px;
+    }    
+    .game-details
+    {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .keys
+    {
+        margin-left: 90px;
+        display:block;
+    }
+    .arr
+    {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    .wrapper
+    {
+        width: 100vmin;
+        height: 115vmin;
+       margin-left: calc(100%/2.8);
+       margin-top: 20px;
+    }    
+    .game-details
+    {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .keys
+    {
+        margin-left: 130px;
         display:block;
     }
 }
